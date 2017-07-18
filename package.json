@@ -1,0 +1,30 @@
+{
+  "name": "wellness-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdiejim/wellness-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdiejim/wellness-backend/issues"
+  },
+  "homepage": "https://github.com/jdiejim/wellness-backend#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "bookshelf": "^0.10.4",
+    "express": "^4.15.3",
+    "knex": "^0.13.0",
+    "md5": "^2.2.1",
+    "nodemon": "^1.11.0",
+    "pg": "^7.0.0"
+  }
+}
