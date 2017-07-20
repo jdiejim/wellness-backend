@@ -15,7 +15,7 @@ function getActivities(req, res, next) {
     .catch(error => res.status(500).json({ error }));
 }
 
-function signIn(req, res, next) {
+function logIn(req, res, next) {
   const { email, password } = req.body;
 
   db('users').where({ email, password }).select()
@@ -47,4 +47,4 @@ function postActivity(req, res, next) {
     .catch(error => res.status(500).json({ error }));
 }
 
-module.exports = { getUsers, getActivities, singUp, postActivity, signIn };
+module.exports = { getUsers, getActivities, singUp, postActivity, logIn };
