@@ -14,6 +14,14 @@ function getActivities(req, res, next) {
     .catch(error => res.status(500).json({ error }));
 }
 
+function signIn(req, res, next) {
+  const userReq = req.body;
+
+  db('users').where(userReq).select()
+    .then(user => res.status(200).json({ id: user[0].id }))
+    .catch(error => res.status(500).json({ error }));
+}
+
 function postUser(req, res, next) {
   const user = req.body;
 
@@ -30,4 +38,4 @@ function postActivity(req, res, next) {
     .catch(error => res.status(500).json({ error }));
 }
 
-module.exports = { getUsers, getActivities, postUser, postActivity };
+module.exports = { getUsers, getActivities, postUser, postActivity, signIn };
